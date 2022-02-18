@@ -126,7 +126,7 @@ namespace WinPE_Creation_Tool
                     Cursor.Current = Cursors.WaitCursor;
                     btnGo.Enabled = false;
 
-                    if (rbAMD64.Checked == true)
+                    if (rbAMD64.Checked)
                     {
                         strChoosed = "amd64";
 
@@ -141,7 +141,7 @@ namespace WinPE_Creation_Tool
                         procGenererPE.WaitForExit();
                     }
 
-                    if (rbX86.Checked == true)
+                    if (rbX86.Checked)
                     {
                         strChoosed = "x86";
 
@@ -156,7 +156,7 @@ namespace WinPE_Creation_Tool
                         procGenererPE.WaitForExit();
                     }
 
-                    if (rbARM.Checked == true)
+                    if (rbARM.Checked)
                     {
                         strChoosed = "arm";
 
@@ -171,7 +171,7 @@ namespace WinPE_Creation_Tool
                         procGenererPE.WaitForExit();
                     }
 
-                    if (tbxLCID.Text != "" || cbxDrivers.Checked == true)
+                    if (tbxLCID.Text != "" || cbxDrivers.Checked)
                     {
                         Process procOuvrirWIM = new Process();
                         procOuvrirWIM.StartInfo.FileName = "cmd";
@@ -222,7 +222,7 @@ namespace WinPE_Creation_Tool
 
                     if (Directory.Exists("C:\\WinPE_" + strChoosed))
                     {
-                        if (cbxCreateUSB.Checked == true)
+                        if (cbxCreateUSB.Checked)
                         {
                             if (cbxUSB.Text != "")
                             {
@@ -250,7 +250,7 @@ namespace WinPE_Creation_Tool
 
                     if (Directory.Exists("C:\\WinPE_" + strChoosed))
                     {
-                        if (cbxScript.Checked == true)
+                        if (cbxScript.Checked)
                         {
                             Process procCreerRepertoireScript = new Process();
                             procCreerRepertoireScript.StartInfo.FileName = "cmd";
@@ -356,7 +356,7 @@ namespace WinPE_Creation_Tool
 
                     if (Directory.Exists("C:\\WinPE_" + strChoosed))
                     {
-                        if (cbxDrivers.Checked == true)
+                        if (cbxDrivers.Checked)
                         {
                             if (tbxDrivers.Text != "")
                             {
@@ -378,7 +378,7 @@ namespace WinPE_Creation_Tool
                         }
                     }
 
-                    if (tbxLCID.Text != "" || cbxDrivers.Checked == true)
+                    if (tbxLCID.Text != "" || cbxDrivers.Checked)
                     {
                         Process procFermerWIM = new Process();
                         procFermerWIM.StartInfo.FileName = "cmd";
@@ -393,7 +393,7 @@ namespace WinPE_Creation_Tool
 
                     if (Directory.Exists("C:\\WinPE_" + strChoosed))
                     {
-                        if (cbxGenerateISO.Checked == true)
+                        if (cbxGenerateISO.Checked)
                         {
                             Process procDeplacerFichier = new Process();
                             procDeplacerFichier.StartInfo.FileName = "cmd";
@@ -483,7 +483,7 @@ namespace WinPE_Creation_Tool
 
         private void CbxDrivers_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxDrivers.Checked == true)
+            if (cbxDrivers.Checked)
             {
                 MessageBox.Show("Add ONE driver path on EACH line.");
             }
