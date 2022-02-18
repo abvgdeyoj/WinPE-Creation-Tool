@@ -80,15 +80,6 @@ namespace WinPE_Creation_Tool
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1 form1 = new Form1();
-
-            this.Hide();
-
-            form1.ShowDialog();
-        }
-
         private void Wizard_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Before using this utility, make sure you have the deployment tools and the WinPE pre-installation environment.\n\nNote : It's necessary to have Windows 10 installed on this computer in order for this utility to work.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
